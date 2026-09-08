@@ -20,7 +20,7 @@ const Register = () => {
       e.preventDefault();
   
       try {
-        const response = await axios.post("http://localhost:8800/api/auth/register", inputs);
+        const response = await axios.post("http://143.198.217.126:8800/api/auth/register", inputs);
     setErr(null); // Clear any previous errors
     console.log(response.data); // Access data if it exists
   } catch (error) {
