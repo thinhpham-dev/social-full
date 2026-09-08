@@ -143,8 +143,8 @@ const Navbar = () => {
                 <img
                   src={
                     currentUser.profilePic
-                      ? `http://localhost:5173/uploads/posts/${currentUser.profilePic}`
-                      : "http://localhost:5173/default/default_profile.png"
+                      ? `http://143.198.217.126:8800/uploads/posts/${currentUser.profilePic}`
+                      : "http://143.198.217.126:8800/default/default_profile.png"
                   }
                   alt="Profile Picture"
                 />

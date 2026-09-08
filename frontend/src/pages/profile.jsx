@@ -81,14 +81,14 @@ const handleUpdate = () => {
               <div
                 className="flex-1 relative mb-6 h-32"
                 style={{
-                  backgroundImage: `url(${data.coverPic ? `http://localhost:5173/uploads/posts/${data.coverPic}` : "https://via.placeholder.com/800x400"})`,
+                  backgroundImage: `url(${data.coverPic ? `http://143.198.217.126:8800/uploads/posts/${data.coverPic}` : "https://via.placeholder.com/800x400"})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   borderRadius: "0.5rem",
                 }}
               >
                 <div className="flex items-center justify-center h-full p-4">
-                  <img src={data.profilePic ? `http://localhost:5173/uploads/posts/${data.profilePic}` : "https://via.placeholder.com/80"}
+                  <img src={data.profilePic ? `http://143.198.217.126:8800/uploads/posts/${data.profilePic}` : "https://via.placeholder.com/80"}
 alt="Profile Picture"
                     className="w-20 h-20 rounded-full border-4 border-white bg-white"
                   />
