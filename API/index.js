@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-  origin: ["http://143.198.217.126:3000"],
+  origin: ["*"],
 }));
 
 app.use(express.json());
