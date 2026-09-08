@@ -8,7 +8,7 @@ import {
   faEllipsisVertical,
   faCirclePlus
 } from "@fortawesome/free-solid-svg-icons";
-import AddStory from './addstory';
+import AddStory from './addStory';
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { makeRequest } from "../axios";
 import { AuthContext } from "../context/AuthContext";
