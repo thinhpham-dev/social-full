@@ -1,0 +1,44 @@
+version: '1'
+services:
+  # MySQL Database
+  mysql_db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=mydevify_social
+    ports:
+      - "3306:3306"
+    networks:
+      - social-network
+  
+  # Backend Service
+  api: 
+    build: ./API
+    depends_on:
+      - mysql_db
+    environment:
+      - DB_HOST=mysql_db
+      - DB_USER=root
+      - DB_PASSWORD=1234
+      - DB_NAME=mydevify_social
+      - DB_PORT=3306
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./ShowCase:/home/app/ShowCase
+    networks:
+      - social-network
+  
+  # Frontend Service
+  frontend:
+    build: ./frontend
+    depends_on:
+      - api
+    ports:
+      - "3000:80"
+    networks:
+      - social-network
+
+networks:
+  social-network:
+    driver: bridge
